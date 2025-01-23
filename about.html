@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>businessxstream.com
+    </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Font Awesome CSS -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+     
+    <style>
+        /* Custom styles */
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1590650423710-ffa6e7f63440?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace 'background-image.png' with the actual path to your image */
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-section h3 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff; /* Vibrant orange for emphasis */
+        }
+        .hero-section p {
+            font-size: 1.25rem;
+            color: #ffffff;
+        }
+        .btn-custom {
+            background-color: #FF6A00;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .btn-custom:hover {
+            background-color: #E55A00;
+        }
+        .navbar-brand img {
+            height: 120px; /* Adjust size of logo */
+        }
+
+        .services-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.services-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.services-title h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.services-title p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.service-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #E55A00;
+    margin-bottom: 15px;
+}
+
+.service-card h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #6c757d;
+    flex-grow: 1;
+}
+
+@media (max-width: 767px) {
+    .service-card {
+        height: 300px; /* Adjust card height for smaller screens */
+    }
+}
+.container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #444;
+    }
+
+    .franchise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .franchise-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .franchise-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .franchise-card img {
+      max-height: 100px;
+      max-width: 1000px;
+      margin-bottom: 15px;
+      object-fit: contain;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .franchise-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .franchise-card p {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .know-more-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 14px;
+      background-color: #e3342f;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .know-more-btn:hover {
+      background-color: #d32f2f;
+    }
+
+
+
+
+
+
+    .events-section {
+      max-width: 1400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .events-section h2 {
+      font-size: 24px;
+      text-align: left;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .event-card {
+      display: flex;
+      flex-direction: row;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      height: 400px;
+    }
+
+    .event-image {
+      flex: 1;
+      background-color: #eee;
+    }
+
+    .event-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .event-content {
+      flex: 2;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .event-content h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .event-content p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .event-content .event-info {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .register-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      font-size: 14px;
+      background-color: #28a745;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .register-btn:hover {
+      background-color: #218838;
+    }
+
+
+
+    h1, h2, h3, h4, h5, h6 {
+    color: #2c3145;
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.section_all {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    min-height: 100vh;
+}
+.section-title {
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    letter-spacing: 0.4px;
+    line-height: 28px;
+    max-width: 550px;
+}
+
+.section-title-border {
+    background-color: #000;
+    height: 1 3px;
+    width: 44px;
+}
+
+.section-title-border-white {
+    background-color: #fff;
+    height: 2px;
+    width: 100px;
+}
+.text_custom {
+    color: #00bd2a;
+}
+
+.about_icon i {
+    font-size: 22px;
+    height: 65px;
+    width: 65px;
+    line-height: 65px;
+    display: inline-block;
+    background: #fff;
+    border-radius: 35px;
+    color: #00bd2a;
+    box-shadow: 0 8px 20px -2px rgba(158, 152, 153, 0.5);
+}
+
+.about_header_main .about_heading {
+    max-width: 450px;
+    font-size: 24px;
+}
+
+.about_icon span {
+    position: relative;
+    top: -10px;
+}
+
+.about_content_box_all {
+    padding: 28px;
+}
+
+
+
+.footer-distributed{
+	background: #000;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+    margin-top: 40px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #222;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  lightseagreen;
+	text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+
+
+
+    .card {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .card p {
+      font-size: 1em;
+      line-height: 1.8;
+      color: #666;
+     }
+    .card ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+    .card ul li {
+      font-size: 1em;
+      line-height: 1.8;
+      color: #666;
+    } 
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 70px; border-bottom: #000;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./WhatsApp_Image_2025-01-23_at_2.40.03_PM-removebg-preview.png" alt="Logo"> <!-- Replace 'logo-image.png' with your logo's path -->
+             
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" style="margin-right: 30px;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./ragestr.html">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contect.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-3 py-md-5">
+        <div class="container">
+          <div class="card">
+            <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+              <div class="col-12 col-lg-6 col-xl-5">
+                <img class="img-fluid rounded" loading="lazy" src="./create-account-office-dark.jpeg" alt="About Us">
+              </div>
+              <div class="col-12 col-lg-6 col-xl-7">
+                <h2>About Us</h2>
+                <p>At BusinessXstream.com, we specialize in empowering entrepreneurs and businesses to achieve their
+                  full potential. As a unit of Thorondor Business Solutions Private Limited, we bring a wealth of expertise,
+                  strategic insight, and innovative solutions to the table. Our mission is to simplify the journey of business
+                  growth and franchising by providing personalized support, actionable strategies, and cutting-edge tools.
+                  From crafting business plans to building franchise models, we partner with our clients at every step to
+                  ensure their success in today’s competitive market. With a commitment to integrity, innovation, and
+                  excellence, BusinessXstream.com continues to be a trusted partner for businesses aiming to innovate,
+                  strategize, and achieve their goals.</p>
+                <h2>What We Offer:</h2>
+                <ul>
+                  <li>Access to premium business opportunities.</li>
+                  <li>Networking through exhibitions and workshops.</li>
+                  <li>Expert consultation for start-ups and struggling mid-journey crisis businesses.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <img src="./WhatsApp_Image_2025-01-23_at_2.40.03_PM-removebg-preview.png" alt="Logo" style="height: 150px;"> <!-- Replace 'logo-image.png' with your logo's path -->
+                 
+            
+    
+            <p class="footer-links">
+                <a href="#" class="link-1">Home</a>
+                
+                <a href="#">Blog</a>
+            
+                <a href="#">Pricing</a>
+            
+                <a href="#">About</a>
+                
+                <a href="#">Faq</a>
+                
+                <a href="#">Contact</a>
+            </p>
+    
+            <p class="footer-company-name" style="color: #fff;">© 2025 Developed & Designed by NextDev Labs </p>
+        </div>
+    
+        <div class="footer-center">
+    
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>NO 103 Shrija Towers Kolachalam Compound ,Ballari-583101,KA</p>
+            </div>
+    
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+91 97312636690</p>
+            </div>
+    
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">Support@businessxstream.com</a></p>
+            </div>
+    
+        </div>
+    
+        <div class="footer-right">
+    
+            <p class="footer-company-about">
+                <span>About the company</span>
+                BusinessXstream.com empowers entrepreneurs and businesses to achieve their full potential through personalized support, actionable strategies, and cutting-edge tools. They specialize in simplifying the journey of business growth and franchising.
+            </p>
+    
+    
+        </div>
+    
+    </footer>
+    </body>
+    </html>
